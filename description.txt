@@ -1,0 +1,8 @@
+1 ST STEP
+Create a web page where there are 3 horizontal lists of movies, each list has 20 movies.
+First list has a title - Now Playing, second - Latest, third - Upcoming.
+Title is on top-left of the list, white color.
+Screen background is black. Lists contain only movie poster (Image).
+There is a little white border around the image.
+The data models must be the same as in the API models even if you do not integrate it
+later with them.
