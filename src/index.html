@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+    <head>
+        <title>Angular</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"> </script>
+        <script src="app.js"> </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body ng-controller="MainController as main">
+        <p>{{ main.sayHello('Ana') }}</p>
+        <p>{{ main.sayHello('David') }}</p>
+
+        <h2>Now Playing</h1>
+            <ul class="flex-container">
+                <li ng-repeat="x in main.nowPlaying" class="flex-item" >   <!--apiData  .getData('now_playing') -->
+                    <img src="{{ main.getImage(x) }}" alt="" />
+                </li>
+            </ul>
+
+        <h2>Latest</h1>
+            <ul class="flex-container">
+                <li ng-repeat="x in main.latest" class="flex-item" >   <!--apiData  .getData('now_playing') -->
+                    <img src="{{ main.getImage(x) }}" alt="" />
+                </li>
+            </ul>
+            <!-- <img src="{{ main.getImage(x) }}" alt="" /> -->
+
+        <h2>Upcoming</h1>
+            <ul class="flex-container">
+                <li ng-repeat="x in main.upcoming" class="flex-item" >   <!--apiData  .getData('now_playing') -->
+                    <img src="{{ main.getImage(x) }}" alt="" />
+                </li>
+            </ul>
+
+    </body>
+
+</html>
