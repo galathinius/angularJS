@@ -1,15 +1,6 @@
 const app = angular.module('myApp', []);
 
 app.controller('MainController', function ($http) {
-  // console.log('Helloooo');
-  // this.message = 'hellooo';
-  // this.sayHello = function (name) {
-  //   return `${this.message} ${name}`;
-  // };
-
-  const tmdbKey = '06f99320c4d4aafa43383b3d6c8da151';
-  const imageURL = 'https://image.tmdb.org/t/p/w500';
-
   this.getLink = function (category) {
     return `https://api.themoviedb.org/3/movie/${category}?api_key=${tmdbKey}`;
   };
@@ -18,6 +9,8 @@ app.controller('MainController', function ($http) {
     .then((response) => {
       this.nowPlaying = response.data.results;
     });
+
+  // this.nowPlaying = getData('now_playing');
 
   $http.get(this.getLink('popular'))
     .then((response) => {
@@ -34,4 +27,11 @@ app.controller('MainController', function ($http) {
   };
 });
 
-// https://api.themoviedb.org/3/movie/now_playing?api_key=${this.tmdbKey}
+app.factory('getData', function ($http, category) {
+  $http.get(this.getLink(category))
+    .then((response) => {
+      toReturn = response.data.results;
+    });
+
+  return toReturn;
+});
