@@ -1,34 +1,35 @@
 <!DOCTYPE HTML>
-<html ng-app="myApp">
+<html>
     <head>
         <title>Angular</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"> </script>
         <script src="app.js"> </script>
+        <script src="configuration.js"></script>
+        <script src="list.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body ng-controller="MainController as main">
-        <p>{{ main.sayHello('Ana') }}</p>
-        <p>{{ main.sayHello('David') }}</p>
+    <body  ng-app="myApp" ng-controller="MainController as main">
 
-        <h2>Now Playing</h1>
+        <list> </list>
+
+        <h2>Now Playing</h2>
             <ul class="flex-container">
-                <li ng-repeat="x in main.nowPlaying" class="flex-item" >   <!--apiData  .getData('now_playing') -->
+                <li ng-repeat="x in main.nowPlaying" class="flex-item" >   
                     <img src="{{ main.getImage(x) }}" alt="" />
                 </li>
             </ul>
 
-        <h2>Latest</h1>
+        <h2>Latest</h2>
             <ul class="flex-container">
-                <li ng-repeat="x in main.latest" class="flex-item" >   <!--apiData  .getData('now_playing') -->
+                <li ng-repeat="x in main.latest" class="flex-item" >   
                     <img src="{{ main.getImage(x) }}" alt="" />
                 </li>
             </ul>
-            <!-- <img src="{{ main.getImage(x) }}" alt="" /> -->
 
-        <h2>Upcoming</h1>
+        <h2>Upcoming</h2>
             <ul class="flex-container">
-                <li ng-repeat="x in main.upcoming" class="flex-item" >   <!--apiData  .getData('now_playing') -->
+                <li ng-repeat="x in main.upcoming" class="flex-item" >   
                     <img src="{{ main.getImage(x) }}" alt="" />
                 </li>
             </ul>
