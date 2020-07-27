@@ -2,9 +2,11 @@ angular
   .module('myApp')
   .component('list', {
     templateUrl: 'list/list.html',
-    controller: function ListController(category, movieService) {
-      movieService.getData(category)
-        .then((result) => this.category = result);
+    bindings: { category: "@" },
+    controller: function ListController(movieService) {
+      this.$onInit = function () {
+        movieService.getData(this.category)
+          .then((result) => this.categories = result);
+      }
     },
-
   });
