@@ -1,0 +1,22 @@
+img {
+    padding: 1rem;
+    max-height: 15rem;
+}
+
+.flex-item {
+    background-color: #fff;
+}
+
+.flex-container {
+    display: flex; 
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  body {
+    background-color:#011229;
+  }
+
+  h2, p {
+    color: #ebf0f7;
+  }
