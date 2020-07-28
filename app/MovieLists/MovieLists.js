@@ -1,8 +1,8 @@
-angular.module('app.MovieLists', ['ngRoute'])
+angular.module('app.movieLists', ['ngRoute'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'MovieLists/MovieLists.html',
-      controller: 'MovieListsCtrl',
+      templateUrl: 'movieLists/movieLists.html',
+      controller: 'movieListsCtrl',
     });
   }])
-  .controller('MovieListsCtrl', [function () { }]);
+  .controller('movieListsCtrl', [function () { }]);
