@@ -1,19 +1,27 @@
 .logInButton {
-    background-color: #2e6aa6;
-    width: 15rem;
-    height: 1.6rem;
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 25px;
-    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  background-color: #2e6aa6;
+  width: 15rem;
+  height: 1.6rem;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: var(
+    --pure-material-font,
+    "Roboto",
+    "Segoe UI",
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
 }
 
-a:link, a:visited {
-    color: #fff;
-    text-decoration: none;
-    cursor: auto;
-  }
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+  cursor: auto;
+}
 
-  /* credit https://codepen.io/finnhvman/pen/MQyJxV */
+/* credit https://codepen.io/finnhvman/pen/MQyJxV */

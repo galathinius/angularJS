@@ -1,12 +1,13 @@
-const getTokenLink = 'https://api.themoviedb.org/3/authentication/token/new?api_key=06f99320c4d4aafa43383b3d6c8da151';
+const getTokenLink = `https://api.themoviedb.org/3/authentication/token/new?api_key=${tmdbKey}`;
+const postSessionLink = `https://api.themoviedb.org/3/authentication/session/new?api_key=${tmdbKey}`;
 
-app.factory('authService', ($http) => ({
+app.factory("authService", ($http) => ({
   getToken() {
-    return $http.get(getTokenLink);
-    //   .then((result) => (
-    //       result.request_token
-    //       ));
+    return $http.get(getTokenLink).then((result) => result.data.request_token);
+  },
+  getSessionId(token) {
+    requestBody = { request_token: token };
+
+    return $http.post(postSessionLink, requestBody);
   },
 }));
-
-// https://www.themoviedb.org/authenticate/5e270b6e3370cfaf9008b04dd0aa36fb9ca5f106?redirect_to=http://localhost:8000/#!/approved
