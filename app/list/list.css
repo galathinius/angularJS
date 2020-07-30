@@ -1,14 +1,14 @@
 img {
-    padding: 1rem;
-    max-height: 15rem;
+  padding: 1rem;
+  max-height: 15rem;
 }
 
 .flex-item {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .flex-container {
-    display: flex; 
-    overflow: auto;
-    white-space: nowrap;
-  }
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+}

@@ -1,10 +1,11 @@
-@import 'list/list.css';
-@import'auth/auth.css';
+@import "list/list.css";
+@import "auth/auth.css";
 
 body {
-    background-color:#011229;
-  }
+  background-color: #011229;
+}
 
-h2, p {
-    color: #ebf0f7;
-  }
+h2,
+p {
+  color: #ebf0f7;
+}
