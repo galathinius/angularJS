@@ -10,7 +10,7 @@ angular
       console.log("extract token", newToken[1]);
 
       authService.getSessionId(newToken[1]).then((res) => {
-        console.log(res.data.session_id);
+        localStorage.setItem("session_id", res.data.session_id);
         return res.data.session_id;
       });
     }
