@@ -1,4 +1,4 @@
-app.component("list", {
+angular.module("app").component("list", {
   templateUrl: "list/list.html",
   bindings: { category: "@" },
   controller: function ListController(movieService) {

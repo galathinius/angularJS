@@ -1,7 +1,7 @@
 const getTokenLink = `https://api.themoviedb.org/3/authentication/token/new?api_key=${tmdbKey}`;
 const postSessionLink = `https://api.themoviedb.org/3/authentication/session/new?api_key=${tmdbKey}`;
 
-app.factory("authService", ($http) => ({
+angular.module("app").factory("authService", ($http) => ({
   getToken() {
     return $http.get(getTokenLink).then((result) => result.data.request_token);
   },
