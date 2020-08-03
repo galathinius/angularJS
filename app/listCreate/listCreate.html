@@ -1,9 +1,14 @@
-<p>creating</p>
+<p>creating a list</p>
 <form>
-  <label>List Name: <input type="text" ng-model="list.name" /></label><br />
+  <label>List Name: <input type="text" ng-model="list.name" /></label>
+
+  <br />
   <label
     >List description: <input type="text" ng-model="list.description" /></label
   ><br />
+  <p ng-show="$ctrl.approve == 'false'">
+    sorry, but you have to write both a name and a description
+  </p>
 
   <input type="submit" ng-click="$ctrl.update(list)" value="Submit" />
 </form>
