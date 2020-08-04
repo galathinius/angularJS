@@ -1,5 +1,6 @@
 @import "list/list.css";
 @import "auth/auth.css";
+@import "listCreate/create.css";
 
 body {
   background-color: #011229;
@@ -8,4 +9,23 @@ body {
 h2,
 p {
   color: #ebf0f7;
+}
+
+.button {
+  background-color: #2e6aa6;
+  width: 15rem;
+  height: 1.6rem;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: var(
+    --pure-material-font,
+    "Roboto",
+    "Segoe UI",
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
 }

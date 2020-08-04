@@ -9,5 +9,10 @@ angular.module("app").config(($routeProvider) => {
       controller: "authCtrl",
       controllerAs: "$ctrl",
     })
+    .when("/create", {
+      templateUrl: "listCreate/listCreate.html",
+      controller: "createCtrl",
+      controllerAs: "$ctrl",
+    })
     .otherwise({ redirectTo: "/logIn" });
 });
