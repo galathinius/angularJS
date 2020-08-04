@@ -1,6 +1,6 @@
-@import "list/list.css";
-@import "auth/auth.css";
-@import "listCreate/create.css";
+@import "components/list/list.css";
+@import "components/auth/auth.css";
+@import "components/listCreate/create.css";
 
 body {
   background-color: #011229;

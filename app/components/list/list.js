@@ -1,5 +1,5 @@
 angular.module("app").component("list", {
-  templateUrl: "list/list.html",
+  templateUrl: "components/list/list.html",
   bindings: { category: "@" },
   controller: function ListController(movieService) {
     this.$onInit = function () {
