@@ -6,6 +6,7 @@ angular.module("app", [
   "ngRoute",
   "app.auth",
   "app.listCreate",
+  "app.list",
 ]);
 // .config(function ($locationProvider) {
 //   $locationProvider.html5Mode(true);

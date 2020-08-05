@@ -15,6 +15,8 @@ module.exports = function (config) {
       "lib/angular/angular.js",
       "lib/angular-route/angular-route.js",
       "../node_modules/angular-mocks/angular-mocks.js",
+      "configuration.js",
+      "app.module.js",
       "components/**/*.js",
       "services/**/*.js",
     ],

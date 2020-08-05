@@ -4,7 +4,7 @@ describe("creating lists module", function () {
   let $httpBackend, $rootScope;
 
   beforeEach(module("services.lists"));
-  beforeEach(module("listCreate"));
+  beforeEach(module("app.listCreate"));
 
   beforeEach(inject(function ($injector) {
     $httpBackend = $injector.get("$httpBackend");
@@ -18,9 +18,10 @@ describe("creating lists module", function () {
 
   describe("listCreate controller", function () {
     it("should show validation error", inject(function ($controller) {
-      // const ctrl = $controller("createCtrl", { $scope: $rootScope });
-      // ctrl.update();
-      expect(false).toBeFalsy();
+      const ctrl = $controller("createCtrl", { $scope: $rootScope });
+      ctrl.name = "";
+      ctrl.update();
+      expect(ctrl.error).toBeFalsy();
     }));
     {
       // commented code
