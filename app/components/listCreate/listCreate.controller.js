@@ -6,7 +6,8 @@ angular
       console.log(list);
 
       // input validation
-      if (!(list?.name || list?.description)) {
+      if (!list?.name || !list?.description) {
+        console.log(list);
         this.approve = false;
         // console.log(this.approve);
       } else {
