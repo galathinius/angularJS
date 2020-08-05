@@ -1,4 +1,8 @@
 angular.module("app", [
+  "services.lists",
+  "services.auth",
+
+  "services.movies",
   "app.movieLists",
   "ngRoute",
   "app.auth",
