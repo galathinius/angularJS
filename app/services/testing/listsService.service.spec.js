@@ -22,11 +22,16 @@ describe("list creating service", function () {
         status_message: "The resource you requested could not be found.",
         status_code: 34,
       };
-
+      const LIST = {
+        name: "test name",
+        description: "test description",
+      };
       localStorage.setItem("session_id", "test-session-id");
       const CREATE_LIST_URL = `https://api.themoviedb.org/3/list?api_key=${tmdbKey}&session_id=test-session-id`;
 
       $httpBackend.whenPOST(CREATE_LIST_URL).respond(ERROR_RESPONSE);
+
+      listsService.createList(LIST.name, LIST.description).then((res) => {});
       expect(ctrl.submitEnabled).toBeFalsy();
     }));
 
