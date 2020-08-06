@@ -3,7 +3,7 @@
 describe("creating lists module", function () {
   let $httpBackend, $rootScope;
 
-  beforeEach(module("services.lists"));
+  beforeEach(module("app"));
   beforeEach(module("app.listCreate"));
 
   beforeEach(inject(function ($injector) {

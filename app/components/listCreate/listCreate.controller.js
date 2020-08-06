@@ -14,8 +14,9 @@ angular
         this.approve = true;
         // console.log(this.approve);
         listsService.createList(list.name, list.description).then((res) => {
-          localStorage.setItem("list_id", res.data.list_id);
-          console.log(`status_message : ${res.data.status_message}`);
+          console.log(res);
+          localStorage.setItem("list_id", res.list_id);
+          console.log(`status_message : ${res.message}`);
         });
       }
     };

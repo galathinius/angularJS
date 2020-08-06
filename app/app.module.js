@@ -1,5 +1,5 @@
 angular.module("app", [
-  "services.lists",
+  // "services.lists",
   "services.auth",
   "services.movies",
   "app.movieLists",
