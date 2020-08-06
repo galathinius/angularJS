@@ -46,7 +46,7 @@ describe("creating lists module", function () {
 
     it("should create list", inject(function ($controller) {
       const ctrl = $controller("createCtrl", { $scope: $rootScope });
-      const list = {
+      const LIST = {
         name: "test name",
         description: "test description",
       };
@@ -61,7 +61,7 @@ describe("creating lists module", function () {
 
       $httpBackend.whenPOST(CREATE_LIST_URL).respond(SUCCES_RESPONSE);
 
-      ctrl.update(list);
+      ctrl.update(LIST);
       $httpBackend.flush();
       expect(ctrl.approve).toBeTruthy();
     }));

@@ -3,7 +3,7 @@ const listCreateUrl = `https://api.themoviedb.org/3/list?api_key=${tmdbKey}&sess
 
 angular
 
-  .module("services.lists", [])
+  .module("app")
 
   .factory("listsService", ($http) => ({
     createList(listName, listDescription) {
